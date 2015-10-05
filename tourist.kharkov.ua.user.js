@@ -2,7 +2,8 @@
 // @name        Kharkov Tourist Bike Events Decorator
 // @version     1.2
 // @author      MaksBrainiac MakismusXP@gmail.com
-// @include     http://tourist.kharkov.ua/*
+// @include     *://tourist.kharkov.ua/*
+// @include     *://xt.ht/*
 // @grant none
 // ==/UserScript==
 
