@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Kharkov Tourist Bike Events Decorator
-// @version     1.2
+// @version     1.3
 // @author      MaksBrainiac MakismusXP@gmail.com
 // @include     *://tourist.kharkov.ua/*
 // @include     *://xt.ht/*
@@ -89,6 +89,53 @@ function updateTouristList()
         $(this).attr('href', 'http://tourist.kharkov.ua/phpbb/memberlist.php?username=' + encodeURIComponent($(this).text()));
         $(this).after($('<a style="color: black; font-weight: bold; margin-left: 4px;"></a>').text('©' /* + $(this).text()*/ + '').attr('href', 'http://' + encodeURIComponent($(this).text()) + '.tourist.kharkov.ua'));
     });
+    
+    if (window.location.href.indexOf("cycleplan_index") > 0)
+    {
+        var mVal = $('#wrapcentre table').eq(0).find('select[name="m"]').val();
+        var yVal = $('#wrapcentre table').eq(0).find('input[name="y"]').val();
+        var ymDate = new Date(yVal, mVal-1, 1, 0, 0, 0);
+        
+        $('#wrapcentre table').eq(1).find('tr').each(function(index){
+            var d = $(this).find('td').eq(0).text();
+            var $$td = $(this).find('td').eq(2);
+            var $$tda = $(this).find('td').eq(4);
+            var completed = $(this).find('td').eq(5).text() == "Завершена";
+            if (completed)
+            {
+                $(this).css('color', '#555555');
+                $(this).find('td a').css('color', '#555555');
+                $(this).find('td a').css('font-weight', 'normal');
+            }
+            
+            if ($$td.text().indexOf('[Вело]') > -1)
+            {
+                if (!completed)
+                {
+                    $$td.find('a').css('color', '#553311');
+                    $$tda.find('a').css('color', '#553311');
+                }
+                $$td.css('font-weight', 'bold');
+                $$tda.css('font-weight', 'bold');
+            }
+
+            if (friends.indexOf($$tda.text()) >= 0)
+            {
+                $$tda.css('font-size', '16px');
+                $$td.css('font-size', '14px');
+            }
+            
+            if (d != "")
+            {
+                ymDate.setDate(d);
+                var wD = ymDate.getDay();
+                if (wD == 0 || wD == 6)
+                {
+                    $(this).css('background-color', '#FCF8E3');
+                }
+            }
+        });
+    }
 }
 
 //codeEval(getRLink);
