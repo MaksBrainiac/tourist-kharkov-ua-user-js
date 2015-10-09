@@ -327,6 +327,7 @@ function updateTouristList()
                     zDiv.empty();
                 });
 
+                zDiv.empty();
                 xDiv.addClass('abr');
                 zDiv.append(xDiv);
                 xDiv.append($cButton);
