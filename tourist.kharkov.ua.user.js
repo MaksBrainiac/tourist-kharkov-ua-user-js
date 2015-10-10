@@ -4,6 +4,7 @@
 // @author      MaksBrainiac
 // @include     *://tourist.kharkov.ua/*
 // @include     *://xt.ht/*
+// @grant       none
 // @downloadURL https://github.com/MaksBrainiac/tourist-kharkov-ua-user-js/raw/master/tourist.kharkov.ua.user.js
 // ==/UserScript==
 
