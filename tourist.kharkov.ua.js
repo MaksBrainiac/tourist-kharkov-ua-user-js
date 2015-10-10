@@ -274,7 +274,8 @@
                 $("#textFriends").val(friends.join("\n"));
                 $("#savefr").click(function(ev){
                     ev.preventDefault();
-                    var ffList = $('#textFriends').val().split("\n");
+                    var fVal = $('#textFriends').val();
+                    var ffList = fVal ? fVal.split("\n") : [];
                     localStorage.setItem("KTDEC-friends", ffList.join("\n"));
                     zDiv.empty();
                     zDiv.hide();
@@ -306,7 +307,8 @@
                                     fList.push(na);
                                 }
 
-                                var ffList = $('#textFriends').val().split("\n");
+                                var fVal = $('#textFriends').val();
+                                var ffList = fVal ? fVal.split("\n") : [];
                                 for (var i = 0; i < fList.length; i++)
                                 {
                                     if (ffList.indexOf(fList[i]) < 0)
