@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Kharkov Tourist Bike Events Decorator
-// @version     1.4
+// @version     1.4.0.1
 // @author      MaksBrainiac
 // @include     *://tourist.kharkov.ua/*
 // @include     *://xt.ht/*
