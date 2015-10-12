@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name        Kharkov Tourist Bike Events Decorator
-// @version     1.4.0.1
+// @description Nice colors for bike events, cool bike events calendar
+// @version     1.4.0.2
 // @author      MaksBrainiac
 // @include     *://tourist.kharkov.ua/*
 // @include     *://xt.ht/*
