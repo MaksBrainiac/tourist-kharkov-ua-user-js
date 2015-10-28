@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Kharkov Tourist Bike Events Decorator
 // @description Nice colors for bike events, cool bike events calendar
-// @version     1.4.0.2
+// @version     1.4.0.3
 // @author      MaksBrainiac
 // @include     *://tourist.kharkov.ua/*
 // @include     *://xt.ht/*
@@ -122,7 +122,7 @@
                 var d = $(this).find('td').eq(0).text();
                 var $$td = $(this).find('td').eq(2);
                 var $$tda = $(this).find('td').eq(4);
-                var completed = $(this).find('td').eq(5).text() == "Завершена";
+                var completed = $(this).find('td').eq(5).text() == "Завершена" || $(this).find('td').eq(5).text() == "Отменена";
                 if (completed)
                 {
                     $(this).css('color', '#555555');
@@ -136,9 +136,11 @@
                     {
                         $$td.find('a').css('color', '#553311');
                         $$tda.find('a').css('color', '#553311');
+                        $$td.css('font-weight', 'bold');
+                        $$tda.css('font-weight', 'bold');
+                        $$td.find('a').css('font-weight', 'bold');
+                        $$tda.find('a').css('font-weight', 'bold');
                     }
-                    $$td.css('font-weight', 'bold');
-                    $$tda.css('font-weight', 'bold');
                 }
 
                 if (friends.indexOf($$tda.text()) >= 0)
