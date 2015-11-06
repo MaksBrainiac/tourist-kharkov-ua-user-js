@@ -284,7 +284,7 @@
                     localStorage.setItem("KTDEC-friends", ffList.join("\n"));
                     zDiv.empty();
                     zDiv.hide();
-                    window.location.href = window.location.href;
+                    window.location.reload();
                 });    
                 $("#loadprof").click(function(ev){
                     ev.preventDefault();
