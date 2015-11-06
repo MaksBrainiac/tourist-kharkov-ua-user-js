@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Kharkov Tourist Bike Events Decorator
-// @version     1.4.0.3
+// @version     1.4.0.4
 // @author      MaksBrainiac
 // @include     *://tourist.kharkov.ua/*
 // @include     *://xt.ht/*
@@ -281,7 +281,7 @@
                     localStorage.setItem("KTDEC-friends", ffList.join("\n"));
                     zDiv.empty();
                     zDiv.hide();
-                    window.location.href = window.location.href;
+                    window.location.reload();
                 });    
                 $("#loadprof").click(function(ev){
                     ev.preventDefault();
