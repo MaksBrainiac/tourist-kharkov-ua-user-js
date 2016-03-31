@@ -171,7 +171,7 @@
             '.abs { text-align: center; width: 100%; position: absolute; z-index: 100; padding-top: 250px; } \n' +
             '.abr { text-align: left; position: relative; display: inline-block; margin: 0 auto; } \n' +
             '.fo  { text-align: left; position: relative; display: inline-block; margin: 0 auto; padding: 5px 10px; background: #FFEECC; box-shadow: 0 0 5px rgba(0,0,0,0.5); } \n' +
-            '.cls { position: absolute; text-decoration: none; right: -8px; top: -8px; font-weight: bold; font-size: 20px; color: white !important; text-shadow: -1px -1px 0 #000,  1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; } \n' +
+            '.cls { position: absolute; text-decoration: none; right: -20px; top: -20px; font-weight: bold; font-size: 20px; color: black !important; border-radius: 25px; border: 1px solid black; line-height: 50px; height: 50px; vertical-align: middle; background-color: white; width: 50px; text-align: center; display: inline-block; } \n' +
             '.rLink { position: absolute; left: 0; top: 6px; font-weight: bold; } \n' +
             '.links { text-align: center; padding-top: 5px; font-weight: bold; } \n' +
             '.fo { position: relative; } \n' +
