@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Kharkov Tourist Bike Events Decorator
 // @description Nice colors for bike events, cool bike events calendar
-// @version     1.4.0.5
+// @version     1.4.0.6
 // @author      MaksBrainiac
 // @include     *://tourist.kharkov.ua/*
 // @include     *://xt.ht/*
@@ -338,10 +338,8 @@
                 var dMon = new Date(dNow);
                 dMon.setDate(dMon.getDate() - day + (day == 0 ? -6:1) - 7);
                 dPlus2W = new Date(dMon);
-                dPlus2W.setDate(dPlus2W.getDate() + 13);
-
+                dPlus2W.setDate(dPlus2W.getDate() + 20);
                 ///dPlus2W = new Date(2015, 08, 1);
-                ///console.log(dPlus2W);
 
                 var dStart = new Date(dMon);
 
@@ -427,7 +425,7 @@
                         loadCalendarData(dPlus2W.getFullYear(), dPlus2W.getMonth() + 1, function(elist){
                             readyFunc(events.concat(elist));
                         });
-                    }
+                    };
                 }
                 loadCalendarData(dMon.getFullYear(), dMon.getMonth() + 1, nextFunc);
             });
