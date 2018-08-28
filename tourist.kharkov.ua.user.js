@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Kharkov Tourist Bike Events Decorator
 // @description Nice colors for bike events, cool bike events calendar
-// @version     1.4.0.6
+// @version     1.4.0.7
 // @author      MaksBrainiac
 // @include     *://tourist.kharkov.ua/*
 // @include     *://xt.ht/*
@@ -242,6 +242,8 @@
             };
 
             var $menuLinks = $('#menubar .genmed').eq(0);
+            $menuLinks.append("&nbsp; &nbsp;");
+            $menuLinks.append($('<a href="/phpbb/cycleplan_index.php">Календарь</a>'));
             $menuLinks.append("&nbsp; &nbsp;");
             $menuLinks.append($('<a class="decorated" href="#" id="bikeCal">Велокалендарь!</a>'));
             $menuLinks.append("&nbsp; &nbsp;");
